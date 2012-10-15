@@ -1,7 +1,10 @@
 ChrnoAuditExample::Application.routes.draw do
-  chrno_audit_for :pages
 
-  resources :pages
+
+
+
+  resources :pages do chrno_audit end
+
 
   devise_for :users
 
