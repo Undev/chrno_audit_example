@@ -1,0 +1,25 @@
+<%= form_for(@nested_page) do |f| %>
+  <% if @nested_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nested_page.errors.count, "error") %> prohibited this nested_page from being saved:</h2>
+
+      <ul>
+      <% @nested_page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Listing nested_pages</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nested_pages.each do |nested_page| %>
+  <tr>
+    <td><%= nested_page.author %></td>
+    <td><%= nested_page.text %></td>
+    <td><%= link_to 'Show', nested_page %></td>
+    <td><%= link_to 'Edit', edit_nested_page_path(nested_page) %></td>
+    <td><%= link_to 'Destroy', nested_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'History', chrno_audit.history_path(nested_page.class.model_name.underscore, "id", nested_page.id) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page', new_nested_page_path %>

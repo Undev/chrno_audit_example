@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Author:</b>
+  <%= @nested_page.author %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @nested_page.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_nested_page_path(@nested_page) %> |
+<%= link_to 'Back', nested_pages_path %>

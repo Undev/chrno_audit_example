@@ -1,13 +1,4 @@
 class PagesController < ApplicationController
-
-  def history
-    @page = Page.find params[:id]
-
-    @pages = ChrnoAudit::AuditRecord.for( @page ) \
-                                    .order( "audit_log.created_at DESC" ) \
-                                    .includes( :initiator )
-  end
-
   # GET /pages
   # GET /pages.json
   def index

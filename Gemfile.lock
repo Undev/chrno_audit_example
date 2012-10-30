@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/Undev/chrno_audit.git
-  revision: 759fe0b3b5ac2559b8461449740a7a654b61ed3c
-  branch: views
+  revision: 84fbc6cf3dd9644cc0d3534f2d929c3ac4611643
+  branch: develop
   specs:
     chrno_audit (0.1.1)
       activerecord (>= 3.1)

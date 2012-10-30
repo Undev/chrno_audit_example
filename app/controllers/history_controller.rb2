@@ -1,0 +1,5 @@
+#class HistoryController < ChrnoAudit::HistoryController
+  #def index
+  #  super
+  #end
+#end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008140949) do
+ActiveRecord::Schema.define(:version => 20121030105127) do
 
   create_table "audit_log", :force => true do |t|
     t.string   "auditable_type", :null => false
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20121008140949) do
   add_index "audit_log", ["auditable_type", "auditable_id"], :name => "index_audit_log_on_auditable_type_and_auditable_id"
   add_index "audit_log", ["created_at"], :name => "index_audit_log_on_created_at"
   add_index "audit_log", ["initiator_type", "initiator_id"], :name => "index_audit_log_on_initiator_type_and_initiator_id"
+
+  create_table "nested_pages", :force => true do |t|
+    t.string   "author"
+    t.string   "text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "author"
